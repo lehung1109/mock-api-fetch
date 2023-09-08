@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="/mock-api.js"></script>
+</head>
+<body>
+  <script>
+    // create mock
+    window.mock({
+      url: '/api/avatar',
+      callback: (req) => {
+        const method = req?.method;
+
+        if (method && method.toLowerCase() !== 'get') {
+          return {
+            body: `Only allow GET method`
+          }
+        }
+
+        return {
+          body: [
+            {
+              name: "Peg Legge",
+              image: {
+                src: "/samples/peg-legge.svg",
+                width: '175',
+                height: '175',
+                alt: 'people 1'
+              },
+              jobTitle: "CEO"
+            },
+            {
+              name: "Richard Guerra",
+              image: {
+                src: "/samples/richard-guerra.svg",
+                width: '175',
+                height: '175',
+                alt: 'people 2'
+              },
+              jobTitle: "CEO"
+            },
+            {
+              name: "Alexandra Stolz",
+              image: {
+                src: "/samples/alexandra-stolz.svg",
+                width: '175',
+                height: '175',
+                alt: 'people 3'
+              },
+              jobTitle: "CEO"
+            },
+            {
+              name: "Janet Bray",
+              image: {
+                src: "/samples/janet-bray.svg",
+                width: '175',
+                height: '175',
+                alt: 'people 4'
+              },
+              jobTitle: "CEO"
+            },
+          ]
+        }
+      }
+    });
+
+    // expect data
+    fetch('/api/avatar').then(res => res.json()).then(console.log);
+  </script>
+</body>
+</html>
