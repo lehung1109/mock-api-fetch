@@ -7,7 +7,7 @@ Mock http request made using [fetch](https://developer.mozilla.org/en-US/docs/We
 ### Include script file to your app
 
 ```js
-<script src="/mock-api.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@heroitvn/mock-api-fetch/dist/mock-api.js"></script>
 ```
 
 ### Create a mock
