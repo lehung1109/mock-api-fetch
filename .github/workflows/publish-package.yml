@@ -1,3 +1,5 @@
+name: Publish package to npm
+run-name: ${{ github.actor }} is publishing package to npm 🚀
 on:
   workflow_dispatch:
 
