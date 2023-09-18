@@ -2,6 +2,9 @@
 
 Mock http request made using [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
+## Demo
+https://lehung1109.github.io/mock-api-fetch/demo/
+
 ## Usage
 
 ### Include script file to your app
